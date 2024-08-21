@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+EDIT ON
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  /* color: black; */
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+a:after {
+  display:block;
+  content: '';
+  width: inherit;
+  border-bottom: solid 3px #ffc107;  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
+}
+
+a:hover:after { transform: scaleX(1); }
+
+a.from-left:after {
+  transform-origin: left;
+}
+
+a.from-right:after {
+  transform-origin: right;
+}
