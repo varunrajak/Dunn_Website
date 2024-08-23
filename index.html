@@ -1,75 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link rel="stylesheet" href="src/output.css">
-  </head>
+    <title>DCIT</title>
+</head>
 
-  <body>
-    <header class="text-black body-font top-0 z-50 md:sticky">
-      <div class="flex flex-wrap p-5 items-center w-full bg-white">
-        <!-- Logo and Branding -->
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <div>
-            <img src="./images/Dunn COMPANIES.png" alt class="w-20 h-10 text-white">
-          </div>
-          <span class="ml-3 text-xl font-bold">IT Resource</span>
-        </a>
-    
-        <!-- Navigation Links (Centered) -->
-        <nav class="flex flex-col md:flex-row items-center text-base justify-center flex-1 space-x-0 md:space-x-8 mt-4 md:mt-0">
-          <a href="#Home" class="hover:text-gray-900 font-bold text-xl">Home</a>
-          <a href="#" class="hover:text-gray-900 font-bold text-xl">Docs</a>
-          <a href="#Ticket" class="hover:text-gray-900 font-bold text-xl">Ticket</a>
-          <a href="#About Us" class="hover:text-gray-900 font-bold text-xl">About us</a>
-          <a href="#Contact" class="hover:text-gray-900 font-bold text-xl">Contact</a>
-        </nav>
-    
-        <!-- Search Form (Aligned to the Right) -->
-        <form class="mt-4 md:mt-0 py-2 px-6 w-80 rounded-full bg-gray-50 border flex focus-within:border-gray-300 items-center">
-          <input type="text" placeholder="Search anything" class="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0" name="topic">
-          <button class="flex items-center justify-center min-w-[130px] px-4 rounded-full font-medium tracking-wide border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-black text-white font-medium tracking-wide border-transparent py-1.5 h-[38px] hover:bg-gray-600">
-            Search
-          </button>
-        </form>
+<body>
+  <header class="bg-white z-50 md:top-0 md:sticky">
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
+      <div>
+        <img class="w-25 h-20 p-2 cursor-pointer" src="./images/Dunn COMPANIES.png" alt="...">
       </div>
-      <div class="bg-yellow-500 h-1"></div>
-    </header>
-    
+      <div class="nav-links z-50 top-[-100%] duration-500 md:static absolute bg-black md:bg-white md:text-black font-bold text-xl text-white md:min-h-fit min-h-[60vh] left-0 md:w-auto w-full flex items-center px-5">
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+          <li><a  href="#Home">Home</a></li>
+          <li><a  href="#">Docs</a></li>
+          <li><a  href="#Ticket">Ticket</a></li>
+          <li><a  href="#About Us">About us</a></li>
+          <li><a  href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <button class="group relative my-6 px-7 py-2 font-medium text-white hover:text-white">
+          <span class="absolute inset-0 h-full w-full translate-x-0 -skew-x-12 bg-yellow-500 transform transition-all duration-300 ease-out group-hover:skew-x-0 group-hover:bg-yellow-700"></span>
+          <span class="absolute inset-0 h-full w-full skew-x-12 transform bg-black transition-all duration-300 ease-out group-hover:-skew-x-0 group-hover:bg-black"></span>
+          <span class="relative">Resources</span>
+        </button>
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+      </div>
+    </nav>
+    <div class="bg-yellow-500 h-1"></div>
+  </header>
+  
+  <!-- Your Home section here -->
+  <section id="Home">
+    <div
+      class="z-0 relative bg-[url('./images/bg1.jpeg')] bg-cover bg-center bg-fixed w-full h-[75rem] flex flex-col justify-between">
+      <!-- Optional Overlay for Better Text Contrast -->
+      <div class="absolute inset-0 bg-black opacity-50"></div>
 
-    <!-- Hero Section -->
-    <section id="Home">
-      <div
-        class="relative bg-[url('../images/bg1.jpeg')] bg-cover bg-center bg-fixed w-full h-[75rem] flex flex-col justify-between">
-        <!-- Optional Overlay for Better Text Contrast -->
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-
-        <!-- Centered Text Container -->
-        <div class="flex-grow flex items-center justify-center">
-          <div class="relative z-10 text-center">
-            <p class="text-8xl font-extrabold text-yellow-500">Welcome to the
-              <span
-                class="text-white">DCIT</span> resource website</p>
-            <p class="text-white">Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Nihil in dolor consequatur molestiae tenetur
-              amet
-              similique corrupti laborum inventore sint non labore eveniet sed
-              magnam deserunt, architecto, illo beatae! Perferendis.</p>
-            <button
-              class="group relative my-6 px-7 py-2 font-medium text-white hover:text-white">
-              <span
-                class="absolute inset-0 h-full w-full translate-x-0 -skew-x-12 bg-yellow-500  transformtransition-all duration-300 ease-out group-hover:skew-x-0 group-hover:bg-yellow-700"></span>
-              <span
-                class="absolute inset-0 h-full w-full skew-x-12 transform  bg-black  transition-all duration-300 ease-out group-hover:-skew-x-0 group-hover:bg-black"></span>
-              <span class="relative">Resources</span>
-            </button>
-          </div>
+      <!-- Centered Text Container -->
+      <div class="flex-grow flex items-center justify-center">
+        <div class="relative z-10 text-center">
+          <p
+            class="text-3xl md:text-8xl font-extrabold text-yellow-500">Welcome
+            to the
+            <span
+              class="text-white">DCIT</span> resource website</p>
+          <p class="text-white">Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Nihil in dolor consequatur molestiae tenetur
+            amet
+            similique corrupti laborum inventore sint non labore eveniet sed
+            magnam deserunt, architecto, illo beatae! Perferendis.</p>
+          <button
+            class="group relative my-6 px-7 py-2 font-medium text-white hover:text-white">
+            <span
+              class="absolute inset-0 h-full w-full translate-x-0 -skew-x-12 bg-yellow-500  transformtransition-all duration-300 ease-out group-hover:skew-x-0 group-hover:bg-yellow-700"></span>
+            <span
+              class="absolute inset-0 h-full w-full skew-x-12 transform  bg-black  transition-all duration-300 ease-out group-hover:-skew-x-0 group-hover:bg-black"></span>
+            <span class="relative">Resources</span>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  
 
     <!-- Statistics  -->
 
@@ -82,7 +86,8 @@
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever
             cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify,
             subway tile poke farm-to-table. Franzen you probably haven't heard
-            of them man bun deep jianbing selfies heirloom prism food truck ugh
+            of them man bun deep jianbing selfies heirloom prism food truck
+            ugh
             squid celiac humblebrag.</p>
         </div>
         <div class="flex flex-wrap -m-4 text-center">
@@ -136,7 +141,8 @@
                 viewBox="0 0 24 24">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                <path
+                  d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
               </svg>
               <h2
                 class="title-font font-medium text-3xl text-gray-900">900+</h2>
@@ -152,7 +158,8 @@
                 viewBox="0 0 24 24">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              <h2 class="title-font font-medium text-3xl text-gray-900">12</h2>
+              <h2
+                class="title-font font-medium text-3xl text-gray-900">12</h2>
               <p class="leading-relaxed">Companies</p>
             </div>
           </div>
@@ -223,7 +230,8 @@
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-2">New
+              <h2
+                class="text-lg text-gray-900 font-medium title-font mb-2">New
                 Hire</h2>
               <p class="leading-relaxed text-base">Fingerstache flexitarian
                 street art 8-bit waist co, subway tile poke farm.</p>
@@ -254,7 +262,8 @@
                 <svg fill="none" stroke="currentColor" stroke-linecap="round"
                   stroke-linejoin="round" stroke-width="2" class="w-6 h-6"
                   viewBox="0 0 24 24">
-                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                  <path
+                    d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
                 </svg>
               </div>
               <h2
@@ -271,10 +280,12 @@
                 <svg fill="none" stroke="currentColor" stroke-linecap="round"
                   stroke-linejoin="round" stroke-width="2" class="w-6 h-6"
                   viewBox="0 0 24 24">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <h2 class="text-lg text-gray-900 font-medium title-font mb-2">VPN
+              <h2
+                class="text-lg text-gray-900 font-medium title-font mb-2">VPN
                 and Access</h2>
               <p class="leading-relaxed text-base">Fingerstache flexitarian
                 street art 8-bit waist co, subway tile poke farm.</p>
@@ -332,7 +343,8 @@
               <div class="flex-grow">
                 <h2 class="text-gray-900 title-font font-medium">Charles
                   Bell</h2>
-                <p class="text-gray-500">Director of Information Technology</p>
+                <p class="text-gray-500">Director of Information
+                  Technology</p>
               </div>
             </div>
           </div>
@@ -466,7 +478,8 @@
             class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact
             Us</h1>
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever
-            cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+            cardigan tote bag tumblr hexagon brooklyn asymmetrical
+            gentrify.</p>
         </div>
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
@@ -529,7 +542,8 @@
                   </svg>
                 </a>
                 <a class="ml-4 text-gray-500">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                  <svg fill="none" stroke="currentColor"
+                    stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
                     viewBox="0 0 24 24">
                     <rect width="20" height="20" x="2" y="2" rx="5"
@@ -668,51 +682,51 @@
         </div>
       </div>
       <!-- <div class="border-t border-gray-200">
-          <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
-            <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
-              <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
-                <label for="footer-field" class="leading-7 text-sm text-white">Placeholder</label>
-                <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-              </div>
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-              <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Bitters chicharrones fanny pack
-                <br class="lg:block hidden">waistcoat green juice
-              </p>
+        <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
+          <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
+            <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
+              <label for="footer-field" class="leading-7 text-sm text-white">Placeholder</label>
+              <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
-            <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
-              <a class="text-gray-500">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a class="ml-3 text-gray-500">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a class="ml-3 text-gray-500">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a class="ml-3 text-gray-500">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
-          </div>
-        </div> -->
-      <!-- <div class="bg-gray-100">
-          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-              <a href="https://twitter.com/knyttneve" class="text-white ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
+            <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+            <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Bitters chicharrones fanny pack
+              <br class="lg:block hidden">waistcoat green juice
             </p>
-            <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Enamel pin tousled raclette tacos irony</span>
           </div>
-        </div> -->
+          <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div> -->
+      <!-- <div class="bg-gray-100">
+        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+          <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+            <a href="https://twitter.com/knyttneve" class="text-white ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
+          </p>
+          <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Enamel pin tousled raclette tacos irony</span>
+        </div>
+      </div> -->
 
       <div
         class=" px-5 py-8 mx-auto flex items-center sm:flex-row flex-col bg-white">
@@ -783,6 +797,15 @@
 
     </footer>
 
-  </body>
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[7%]')
+        }
+    </script>
+</body>
 
 </html>
