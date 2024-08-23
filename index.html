@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="bg-white z-50 md:top-0 md:sticky">
+  <header class="bg-white z-40 md:top-0 md:sticky">
     <nav class="flex justify-between items-center w-[92%] mx-auto">
       <div>
         <img class="w-25 h-20 p-2 cursor-pointer" src="./images/Dunn COMPANIES.png" alt="...">
@@ -34,7 +34,7 @@
           <span class="absolute inset-0 h-full w-full skew-x-12 transform bg-black transition-all duration-300 ease-out group-hover:-skew-x-0 group-hover:bg-black"></span>
           <span class="relative">Resources</span>
         </button>
-        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden z-50"></ion-icon>
       </div>
     </nav>
     <div class="bg-yellow-500 h-1"></div>
@@ -803,7 +803,7 @@
         const navLinks = document.querySelector('.nav-links')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[7%]')
+            navLinks.classList.toggle('top-[10%]')
         }
     </script>
 </body>
